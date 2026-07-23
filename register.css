@@ -17,6 +17,9 @@ form {
 
 .form-group {
   margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 label {
@@ -26,11 +29,12 @@ label {
 }
 
 input {
-  padding: 8px;
+  padding: 15px;
   width: 100%;
   box-sizing: border-box;
-  border-radius: 6px;
+  border-radius: 25px;
   border: none;
+  background-color:lavender;
 }
 
 button {
@@ -43,5 +47,13 @@ button {
 }
 
 button:hover {
-  background-color: #9b9bff;
+  background-color:#5a6dfb;
+}
+input::placeholder{
+  color: darkslategray;
+}
+.sign{
+  color: black;
+  text-decoration: none;
+  font-size: medium;
 }

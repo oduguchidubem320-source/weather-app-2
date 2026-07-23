@@ -7,25 +7,19 @@
   <link rel="stylesheet" href="./register.css">
 </head>
 <body>
-  <h1 class="register">Register here</h1>
+  <h1 class="register">Sign Up Now!</h1>
   
   <form action="submit" method="post">
     <div class="form-group">
-      <label for="username">Username</label>
-      <input type="text" id="username" name="username" required>
-    </div>
-
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
-    </div>
-
-    <div class="form-group">
-      <label for="password">Password</label>
-      <input type="password" id="password" name="password" required>
+            <input type="text" id="username" name="username" required placeholder="First name and last name">
+          <input type="email" id="email" name="email" required placeholder="Email">
+            <input type="number" id="number" name="number" required placeholder="Phone number">
+         <input type="text" id="country" name="country" required placeholder="Country">
+      <input type="text" id="password" name="password" required placeholder="password">
     </div>
 
     <button type="submit">Register</button>
+    <a href="./home.html" class="sign">Continue without signup</a>
   </form>
 </body>
 </html>

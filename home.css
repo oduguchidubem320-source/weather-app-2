@@ -1,3 +1,58 @@
-body{
-    
+body {
+  background-color: #f5f6fa;
+  font-family: 'Poppins', sans-serif;
+}
+
+.icon-stack {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px; 
+}
+
+.menu-icon {
+  font-size: 24px;
+  color: #4a4aff;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.menu-icon:hover {
+  transform: scale(1.1);
+}
+
+.back-arrow {
+  color: #4a4aff;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.back-arrow svg {
+  width: 24px;
+  height: 24px;
+}
+
+.back-arrow:hover {
+  transform: scale(1.1);
+}
+
+.location-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 120px;
+}
+
+.location-icon {
+  font-size: 28px;
+  color: #4a4aff;
+  margin-right: 8px;
+}
+
+.loca {
+  font-size: 24px;
+  color: #333;
 }
