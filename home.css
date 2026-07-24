@@ -56,3 +56,77 @@ body {
   font-size: 24px;
   color: #333;
 }
+
+.weather-card {
+  background-color: #ffffff;
+  width: 340px;
+  margin: 40px auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weather-info {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.info-item {
+  text-align: center;
+  color: #333;
+}
+
+.info-item .material-symbols-outlined {
+  font-size: 28px;
+  color: #4a4aff;
+  margin-bottom: 6px;
+}
+
+.humidity-item {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #eee; 
+  width: 100%;
+  color: #333;
+}
+
+.humidity-item .material-symbols-outlined {
+  font-size: 32px;
+  color: royalblue;
+  margin-bottom: 6px;
+}
+
+.label {
+  font-size: 14px;
+  color: gray;
+}
+.dropdown-menu {
+  display: none;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid azure;
+  border-radius: 8px;
+  position: absolute;
+  top: 50px;
+  left: 20px;
+}
+
+.dropdown-menu a {
+  padding: 10px 16px;
+  text-decoration: none;
+  color:#333;
+  font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+  background-color: black;
+  border-radius: 8px;
+  color: white;
+}
+

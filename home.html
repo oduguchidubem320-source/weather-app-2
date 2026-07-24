@@ -3,14 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./home.css">
   <title>Weather App</title>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="home.css">
+  <script src="./home.js" defer></script>
 </head>
 <body>
   <div class="icon-stack">
+    <div class="dropdown-menu">
+  <a href="./index.html"> Home</a>
+  <a href="register.html"> Register</a>
+</div>
+
     <span class="material-symbols-outlined menu-icon">more_vert</span>
-    <a href="index.html" class="back-arrow">
+    <a href="./index.html" class="back-arrow">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
            fill="none" stroke="currentColor" stroke-width="2" 
            stroke-linecap="round" stroke-linejoin="round">
@@ -18,9 +24,27 @@
       </svg>
     </a>
   </div>
+
   <div class="location-container">
     <span class="material-symbols-outlined location-icon">location_on</span>
     <h1 class="loca">Location</h1>
+  </div>
+
+  <div class="weather-card">
+    <div class="weather-info">
+      <div class="info-item">
+        <span class="material-symbols-outlined">umbrella</span>
+        <p>30%<br><span class="label">Precipitation</span></p>
+      </div>
+      <div class="info-item">
+        <span class="material-symbols-outlined">air</span>
+        <p>12km/h<br><span class="label">Wind Speed</span></p>
+      </div>
+    </div>
+    <div class="humidity-item">
+      <span class="material-symbols-outlined">water_drop</span>
+      <p>20%<br><span class="label">Humidity</span></p>
+    </div>
   </div>
 </body>
 </html>
