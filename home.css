@@ -39,6 +39,25 @@ body {
   transform: scale(1.1);
 }
 
+/* Add icon top right */
+.add-icon-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.add-icon {
+  font-size: 32px;
+  color: #4a4aff;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.add-icon:hover {
+  transform: scale(1.2);
+  color: royalblue;
+}
+
 .location-container {
   display: flex;
   align-items: center;
@@ -54,16 +73,44 @@ body {
 
 .loca {
   font-size: 24px;
-  color: #333;
+  color:#4a4aff;
+}
+
+.h62 {
+  color:#4a4aff;
+  margin-top: 100px;
+}
+
+/* Temperature display section */
+.temperature-display {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.temp-value {
+  font-size: 100px;
+  color: #4a4aff;
+  margin: 0;
+}
+
+.temp-icon .cloud-icon {
+  font-size: 80px;
+  color: #6ea8ff;
+}
+
+.temp-condition {
+  font-size: 20px;
+  color: gray;
+  margin-top: -10px;
 }
 
 .weather-card {
-  background-color: #ffffff;
+  background-color: white;
   width: 340px;
   margin: 40px auto;
-  border-radius: 20px;
+  border-radius: 70px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 7px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -73,6 +120,7 @@ body {
 .weather-info {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   width: 100%;
 }
 
@@ -86,6 +134,8 @@ body {
   color: #4a4aff;
   margin-bottom: 6px;
 }
+
+
 
 .humidity-item {
   text-align: center;
@@ -106,6 +156,7 @@ body {
   font-size: 14px;
   color: gray;
 }
+
 .dropdown-menu {
   display: none;
   flex-direction: column;
@@ -129,4 +180,3 @@ body {
   border-radius: 8px;
   color: white;
 }
-
