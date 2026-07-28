@@ -1,0 +1,57 @@
+
+body {
+  background: linear-gradient(to right, teal, darkcyan);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cover {
+  width: 800px;
+  height: 350px;
+  background: linear-gradient(to right, teal, darkcyan);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 20px;
+}
+
+.cover-text {
+  font-size: 28px;
+  font-weight: bold;
+  max-width: 250px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  width: 150px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+}
+
+.icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.card p {
+  font-size: 16px;
+}
