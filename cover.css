@@ -14,9 +14,10 @@ body {
 .cover {
   width: 800px;
   height: 350px;
-  background: linear-gradient(to right, teal, darkcyan);
+  background: linear-gradient(to bottom, teal, white);
   border-radius: 10px;
   display: flex;
+  justify-content: space-around;
   align-items: center;
   color: white;
   padding: 20px;
