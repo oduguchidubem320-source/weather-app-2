@@ -4,18 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather App</title>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="./home.css">
   <script src="./home.js" defer></script>
+  <script src="./app.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 <body>
   <div class="icon-stack">
-    <div class="dropdown-menu">
+    <div class="dropdown-menu" style="display: none;">
       <a href="./index.html">Home</a>
       <a href="register.html">Register</a>
     </div>
-
     <span class="material-symbols-outlined menu-icon">more_vert</span>
+
     <a href="./index.html" class="back-arrow">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
            fill="none" stroke="currentColor" stroke-width="2"
@@ -31,12 +32,12 @@
 
   <div class="location-container">
     <span class="material-symbols-outlined location-icon">location_on</span>
-    <h1 class="loca">Location</h1>
-    <h6 class="h62">Monday 3 October 9:00</h6>
+    <h6 class="location-name">Location</h6>
+    <h6 class="date-time">Monday 3 October 9:00</h6>
   </div>
 
   <div class="temperature-display">
-    <h1 class="temp-value">19°</h1>
+    <h1 class="temp-header" ><span class="temp-value">0</span>°</h1>
     <div class="temp-icon">
       <span class="material-symbols-outlined cloud-icon">cloud</span>
     </div>
@@ -47,17 +48,17 @@
     <div class="weather-info">
       <div class="info-item">
         <span class="material-symbols-outlined">umbrella</span>
-        <p>30%<br><span class="label">Precipitation</span></p>
+        <p><span class="percip">0</span>%<br><span class="label">Precipitation</span></p>
       </div>
 
       <div class="humidity-item">
         <span class="material-symbols-outlined">water_drop</span>
-        <p>20%<br><span class="label">Humidity</span></p>
+        <p><span class="humidity">0</span>%<br><span class="label">Humidity</span></p>
       </div>
 
       <div class="info-item">
         <span class="material-symbols-outlined">air</span>
-        <p>12km/h<br><span class="label">Wind Speed</span></p>
+        <p><span class="wind-speed">0</span>km/h<br><span class="label">Wind Speed</span></p>
       </div>
     </div>
   </div>
@@ -84,9 +85,9 @@
     <div class="forecast-card">
       <h3>Thu</h3>
       <span class="material-symbols-outlined">thunderstorm</span>
-      <p>10°
-        4°</p>
+      <p>10° / 4°</p>
     </div>
   </div>
+
 </body>
 </html>
