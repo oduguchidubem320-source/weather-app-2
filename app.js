@@ -1,5 +1,4 @@
-async function getWeather() {
-  let city = "enugu";
+async function getWeather(city = "enugu") {
   const degree = document.querySelector(".temp-value")
   const percip = document.querySelector(".percip")
   const wind_speed = document.querySelector(".wind-speed")
@@ -29,27 +28,27 @@ async function getWeather() {
     }
 
     const { name, country, localtime, } = data.location;
-    const { temp_c, humidity , condition , wind_kph, precip_mm,  } = data.current;
-    
-    const formattedDate = new Date(localtime).toLocaleString("en-NG", {
-  weekday: "long",
-  year: "numeric",
-  month: "long",
-  day: "numeric",
-  hour: "2-digit",
-  minute: "2-digit"
-});
-date_time.textContent = formattedDate;
+    const { temp_c, humidity, condition, wind_kph, precip_mm, } = data.current;
 
-  
+    const formattedDate = new Date(localtime).toLocaleString("en-NG", {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit"
+    });
+    date_time.textContent = formattedDate;
+
+
     console.log(typeof precip_mm)
 
     degree.textContent = temp_c
     humidity_value.textContent = humidity
     wind_speed.textContent = wind_kph
     location_name.textContent = name
-    percip.textContent = (parseFloat(precip_mm)*100).toFixed(1)
-    
+    percip.textContent = (parseFloat(precip_mm) * 100).toFixed(1)
+
     temp_condition.textContent = condition.text
     temp_icon.innerHTML = `<img src="${condition.icon}" alt="weather icon" />`
   } catch (error) {
@@ -60,14 +59,49 @@ date_time.textContent = formattedDate;
 
 document.addEventListener("DOMContentLoaded", function () {
   getWeather()
-});
-    const menuIcon = document.querySelector('.menu-icon');
-    const dropdown = document.querySelector('.dropdown-menu');
+  const menuIcon = document.querySelector('.menu-icon');
+  const dropdown = document.querySelector('.dropdown-menu');
+  const icon = document.getElementById("add-icon")
+  const input = document.querySelector(".input-hide")
+  const button = document.getElementById("btn-show")
 
-    menuIcon.addEventListener('click', () => {
-      if (dropdown.style.display === 'none' || dropdown.style.display === '') {
-        dropdown.style.display = 'block';
-      } else {
-        dropdown.style.display = 'none';
-      }
-    });
+  menuIcon.addEventListener('click', () => {
+    if (dropdown.style.display === 'none' || dropdown.style.display === '') {
+      dropdown.style.display = 'block';
+    } else {
+      dropdown.style.display = 'none';
+    }
+    document.addEventListener('click', function () {
+
+    })
+  });
+  icon.addEventListener('click', function () {
+    console.log("click")
+    if (input.style.display === 'none') {
+      input.style.display = 'inline';
+    } else {
+      input.style.display = 'block';
+
+    }
+  })
+  button.addEventListener('click', function () {
+    const city_value = document.getElementById("city-value").value.trim()
+    /** implement a guard to make sure that the city value is not empty before getting its value , if its empty alert the user to make sure to put a */
+    getWeather(city_value)
+    input.style.display = 'none';
+
+  });
+  button.addEventListener("click", () => {
+  const city = document.getElementById("city-value").value.trim();
+  if (city === "") {
+    alert("Please enter a city name!");
+    return;
+      getWeather(city_value);
+      input.style.display = 'none'
+  }
+
+});
+
+
+
+})
